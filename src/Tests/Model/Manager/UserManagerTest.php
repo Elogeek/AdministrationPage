@@ -8,19 +8,14 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Tests/Dumper.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/../Model/DB.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/../Model/Entity/User.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/../Model/Manager/UserManager.php';
-
-
 $userManager = new UserManager();
 
 //add user
 $user = new User(null, 'janine', 'doe','Azerty000', 'doe@gmail.com');
 $userManager->add($user);
+die();
 
-if($user->getId()) {
+if($user->getId(1)) {
     echo "Le role  de l'utilisateur a bien été ajouté<br>";
 }
 else {
@@ -38,25 +33,6 @@ if($exists){
 }
 else {
     echo "Erreur email user not existe<br>";
-    die();
-}
-
-// Test getByMail()
-$user = $userManager->getByMail('doe@gmail.com');
-
-// Test update user.
-if(is_null($userManager->getByMail('doe@gmail.com'))) {
-    $user->setMail('douidouille@gmail.com');
-    $result = $userManager->updateUser($user);
-}
-else {
-    echo "Adresse mail déjà prise.<br>";
-}
-if($result) {
-    echo "user mis à jour<br>";
-}
-else {
-    echo "user pas mis à jour<br>";
     die();
 }
 
