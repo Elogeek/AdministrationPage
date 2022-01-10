@@ -1,5 +1,7 @@
 <?php
 
+namespace Elogeek\AdministrationPage\Model\Entity;
+
 class Article {
 
     private ?int $id;

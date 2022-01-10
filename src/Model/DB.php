@@ -1,5 +1,9 @@
-
 <?php
+
+namespace Elogeek\AdministrationPage\Model;
+
+use PDO;
+use PDOException;
 
 class DB {
     private string $host = 'localhost';
@@ -39,41 +43,12 @@ class DB {
      * @param $data
      * @return string
      */
-
     public static function secureData($data): string {
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         $data = strip_tags($data);
         $data = addslashes($data);
         return trim($data);
-    }
-
-    /**
-     * Return secure int to have secure data to insert into the BDD.
-     * @param $data
-     * @return int
-     */
-    public static function secureInt($data): int {
-        return intval($data);
-    }
-
-    /**
-     * Check if password is correct
-     * @param $psswd
-     * @return bool
-     */
-    public static function checkPassword($psswd): bool {
-        $majuscule = preg_match('@[A-Z]@', $psswd);
-        $minuscule = preg_match('@[a-z]@', $psswd);
-        $number = preg_match('@[0-9]@', $psswd);
-        $special = preg_match('@[^\w]@', $psswd);
-
-        if(!$majuscule || !$minuscule || !$number || strlen($psswd) < 5 || !$special) {
-            return false;
-        }
-        else {
-            return true;
-        }
     }
 
     /**

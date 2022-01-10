@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Entity;
+namespace Elogeek\AdministrationPage\Model\Entity;
 
 class User
 {
