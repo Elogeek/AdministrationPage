@@ -9,6 +9,7 @@
 
     {# Add file css in the project #}
     {% block file_css %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <link rel="stylesheet" href="/assets/scc/style.scss">
     {% endblock %}
@@ -18,26 +19,29 @@
 
         {# Title of the web site #}
         <h1>{{ title }}</h1>
-        {{ dump(title) }}
 
         {# Menu #}
-        <div class="menu">
-            <ul class="navigation">
-                <li>Users</li>
-                <ol class="sub_menu">
-                    <li>add a user</li>
-                    <li>delete a user</li>
-                    <li>modify a user</li>
-                </ol>
-                <li>Articles</li>
-                <ol class="sub_menu">
-                    <li>add a article</li>
-                    <li>delete a article</li>
-                    <li>modify a article</li>
-                    <li>add a author of the article</li>
-                </ol>
-            </ul>
-        </div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/index.php"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href="/index.php"><i class="material-icons left">group</i>Users</a></li>
+                    <li><a href="/index.php"><i class="material-icons left">description</i>Articles</a></li>
+                    <li><a href="/index.php"><i class="material-icons left">contact_phone</i>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/index.php"><i class="material-icons left">home</i>Home</a></li>
+            <li><a href="/index.php"><i class="material-icons left">group</i>Users</a></li>
+            <li><a href="/index.php"><i class="material-icons left">description</i>Articles</a></li>
+            <li><a href="/index.php"><i class="material-icons left">contact_phone</i>Contact</a></li>
+        </ul>
+
+
 
     </div>
 
