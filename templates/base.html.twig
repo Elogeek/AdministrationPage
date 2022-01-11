@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {# Title#}
+    <title>{% block title %}{% endblock%}</title>
+
+    {# Add file css in the project #}
+    {% block file_css %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="stylesheet" href="/assets/scc/style.scss">
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+
+        {# Title of the web site #}
+        <h1>{{ title }}</h1>
+        {{ dump(title) }}
+
+        {# Menu #}
+        <div class="menu">
+            <ul class="navigation">
+                <li>Users</li>
+                <ol class="sub_menu">
+                    <li>add a user</li>
+                    <li>delete a user</li>
+                    <li>modify a user</li>
+                </ol>
+                <li>Articles</li>
+                <ol class="sub_menu">
+                    <li>add a article</li>
+                    <li>delete a article</li>
+                    <li>modify a article</li>
+                    <li>add a author of the article</li>
+                </ol>
+            </ul>
+        </div>
+
+    </div>
+
+    {# add file js #}
+    {% block file_js %}
+        <sript src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></sript>
+        <script src="assets/index.js"></script>
+    {% endblock %}
+
+</body>
+</html>
