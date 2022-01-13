@@ -1,8 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Users{% endblock %}
-
-     {#Home users#}
+    {#Home users#}
     <div class="container">
-        <h1>Users</h1>
+        {% block title %}Users{% endblock %}
+
+        {# Block body #}
+        {% block body %}
+            <span>Mes utilisateurs!</span>
+            {% include "_partials/_items.html.twig" %}
+            {% include "_partials/_items.html.twig" %}
+            {% include "_partials/_items.html.twig" %}
+            <p>
+                {{ user.name }}
+                {{ user.lastName }}
+                {{ user.mail }}
+            </p>
+
+        {% endblock %}
+
     </div>
