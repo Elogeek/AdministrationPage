@@ -15,39 +15,35 @@
     {% endblock %}
 </head>
 <body>
-    <div class="container">
 
+    {# Centre le titre #}
+    <div class="container">
         {# Title of the web site #}
         <h1>{{ title }}</h1>
-
-        {# Menu #}
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/index.php"><i class="material-icons left">home</i>Home</a></li>
-                    <li><a href="/index.php"><i class="material-icons left">group</i>Users</a></li>
-                    <li><a href="/index.php"><i class="material-icons left">description</i>Articles</a></li>
-                    <li><a href="/index.php"><i class="material-icons left">contact_phone</i>Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="/index.php"><i class="material-icons left">home</i>Home</a></li>
-            <li><a href="/index.php"><i class="material-icons left">group</i>Users</a></li>
-            <li><a href="/index.php"><i class="material-icons left">description</i>Articles</a></li>
-            <li><a href="/index.php"><i class="material-icons left">contact_phone</i>Contact</a></li>
-        </ul>
-
-
-
     </div>
+
+    {# Menu #}
+    <nav>
+        <div class="nav-wrapper blue darken-2">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="public/index.php"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="public/index.php"><i class="material-icons left">group</i>Users</a></li>
+                <li><a href="public/index.php"><i class="material-icons left">description</i>Articles</a></li>
+            </ul>
+        </div>
+    </nav>
+    {# Menu responsive #}
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="public/index.php"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="public/index.php"><i class="material-icons left">group</i>Users</a></li>
+        <li><a href="public/index.php"><i class="material-icons left">description</i>Articles</a></li>
+    </ul>
 
     {# add file js #}
     {% block file_js %}
-        <sript src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></sript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script src="assets/index.js"></script>
     {% endblock %}
 
