@@ -8,7 +8,17 @@
         {# Block body #}
         {% block body %}
             <span>Mes articles!</span>p>
-           {% include '_partials/_items.html.twig' %}
+            {% include '_partials/_items.html.twig' %}
+            {% include '_partials/_items.html.twig' %}
+            {% include '_partials/_items.html.twig' %}
+            {% include '_partials/_items.html.twig' %}
+
+            <p>
+                {{ article.name }}
+                {{ article.description }}
+                {{ article.author }}
+            </p>
+            </p>
         {% endblock %}
 
     </div>
