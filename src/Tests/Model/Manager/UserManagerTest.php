@@ -1,6 +1,7 @@
 <?php
 
 require __dir__ . '/../../../vendor/autoload.php';
+
 use Elogeek\AdministrationPage\Model\Entity\User;
 use Elogeek\AdministrationPage\Model\Manager\UserManager;
 
@@ -15,13 +16,6 @@ $user = new User(null, 'janine', 'doe','Azerty000', 'doe@gmail.com');
 $userManager->add($user);
 die();
 
-if($user->getId(1)) {
-    echo "Le role  de l'utilisateur a bien été ajouté<br>";
-}
-else {
-    echo "Erreur en ajoutant l'utilisateur<br>";
-    die();
-}
 /*return a user by id
 $user = $userManager->getById(1);
 Dumper::dieAndDump($user);

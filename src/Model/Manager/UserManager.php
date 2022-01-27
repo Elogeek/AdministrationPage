@@ -58,7 +58,6 @@ class UserManager {
         return intval($request->fetch()['cnt']) > 0;
     }
 
-
     /**
      * Add an user into table user
      * @param User $user
