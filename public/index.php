@@ -21,8 +21,8 @@ $title = "Administration Page!";
 // Affichage du rendu d'un template
 echo $twig->render("base.html.twig", ["title" => $title]);
 
-{# Class user #}
-    class User
+
+ /**   class User
     {
         public string $name;
         public string $lastName;
@@ -37,8 +37,8 @@ echo $twig->render("base.html.twig", ["title" => $title]);
     }
 
     $doe = new User("jhon", "Doe", "doedoe@gmail.com");
-    echo $twig->render("users.html.twig", [
+    echo $twig->render("homeUser.html.twig", [
         'user' => $doe,
         'item' => ['hello', 'jhon', 'doe']
     ]);
-}
+} */

@@ -1,24 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'templates/_partials/base.html.twig' %}
+
+   {% block title %}Articles{% endblock %}
 
     {#Home articles#}
     <div class="container">
 
-        {% block title %}Articles{% endblock %}
-
         {# Block body #}
         {% block body %}
             <span>Mes articles!</span>p>
-            {% include '_partials/_items.html.twig' %}
-            {% include '_partials/_items.html.twig' %}
-            {% include '_partials/_items.html.twig' %}
-            {% include '_partials/_items.html.twig' %}
+            {% include 'templates/_partials/_items.html.twig' %}
 
             <p>
                 {{ article.name }}
                 {{ article.description }}
                 {{ article.author }}
             </p>
-            </p>
+
         {% endblock %}
 
     </div>
